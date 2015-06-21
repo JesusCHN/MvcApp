@@ -1,0 +1,75 @@
+﻿@model InvermabApp.producto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RefProv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Existencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Existencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
