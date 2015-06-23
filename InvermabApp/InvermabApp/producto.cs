@@ -18,11 +18,11 @@ namespace InvermabApp
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string RefProv { get; set; }
-        public Nullable<decimal> precio1 { get; set; }
-        public Nullable<decimal> precio2 { get; set; }
-        public Nullable<decimal> precio3 { get; set; }
-        public Nullable<decimal> precio4 { get; set; }
-        public Nullable<decimal> costo { get; set; }
-        public Nullable<decimal> Existencia { get; set; }
+        public string precio1 { get; set; }
+        public string precio2 { get; set; }
+        public string precio3 { get; set; }
+        public string precio4 { get; set; }
+        public string costo { get; set; }
+        public Nullable<int> Existencia { get; set; }
     }
 }

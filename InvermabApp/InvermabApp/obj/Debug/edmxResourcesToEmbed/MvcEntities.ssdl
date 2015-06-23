@@ -1,25 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="MVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="dbd541ac24df8c44619ce3a4ba0074aa5dModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Errors Found During Generation:
-warning 6002: The table/view 'MVC.dbo.productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'dbd541ac24df8c44619ce3a4ba0074aa5d.dbo.productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="productos">
     <Key>
       <PropertyRef Name="ID" />
       <PropertyRef Name="Codigo" />
-      <PropertyRef Name="Nombre" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="Codigo" Type="nchar" MaxLength="26" Nullable="false" />
-    <Property Name="Nombre" Type="nchar" MaxLength="70" Nullable="false" />
-    <Property Name="RefProv" Type="nchar" MaxLength="24" />
-    <Property Name="precio1" Type="numeric" Precision="18" Scale="4" />
-    <Property Name="precio2" Type="numeric" Precision="18" Scale="4" />
-    <Property Name="precio3" Type="numeric" Precision="18" Scale="4" />
-    <Property Name="precio4" Type="numeric" Precision="18" Scale="4" />
-    <Property Name="costo" Type="numeric" Precision="18" Scale="4" />
-    <Property Name="Existencia" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Nombre" Type="nchar" MaxLength="70" />
+    <Property Name="RefProv" Type="nvarchar" MaxLength="50" />
+    <Property Name="precio1" Type="nvarchar" MaxLength="50" />
+    <Property Name="precio2" Type="nvarchar" MaxLength="50" />
+    <Property Name="precio3" Type="nvarchar" MaxLength="50" />
+    <Property Name="precio4" Type="nvarchar" MaxLength="50" />
+    <Property Name="costo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Existencia" Type="int" />
   </EntityType>
-  <EntityContainer Name="MVCModelStoreContainer">
+  <EntityContainer Name="dbd541ac24df8c44619ce3a4ba0074aa5dModelStoreContainer">
     <EntitySet Name="productos" EntityType="Self.productos" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [productos].[ID] AS [ID], 

@@ -12,7 +12,7 @@ namespace InvermabApp.Controllers
 {
     public class HomeController : Controller
     {
-        private MVCEntities db = new MVCEntities();
+        private MvcEntities db = new MvcEntities();
 
         // GET: Home
         public ActionResult Index(string searchBy, string search)

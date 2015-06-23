@@ -4,27 +4,26 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbd541ac24df8c44619ce3a4ba0074aa5dModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6002: The table/view 'MVC.dbo.productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'dbd541ac24df8c44619ce3a4ba0074aa5d.dbo.productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="productos">
           <Key>
             <PropertyRef Name="ID" />
             <PropertyRef Name="Codigo" />
-            <PropertyRef Name="Nombre" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Codigo" Type="nchar" MaxLength="26" Nullable="false" />
-          <Property Name="Nombre" Type="nchar" MaxLength="70" Nullable="false" />
-          <Property Name="RefProv" Type="nchar" MaxLength="24" />
-          <Property Name="precio1" Type="numeric" Precision="18" Scale="4" />
-          <Property Name="precio2" Type="numeric" Precision="18" Scale="4" />
-          <Property Name="precio3" Type="numeric" Precision="18" Scale="4" />
-          <Property Name="precio4" Type="numeric" Precision="18" Scale="4" />
-          <Property Name="costo" Type="numeric" Precision="18" Scale="4" />
-          <Property Name="Existencia" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="Nombre" Type="nchar" MaxLength="70" />
+          <Property Name="RefProv" Type="nvarchar" MaxLength="50" />
+          <Property Name="precio1" Type="nvarchar" MaxLength="50" />
+          <Property Name="precio2" Type="nvarchar" MaxLength="50" />
+          <Property Name="precio3" Type="nvarchar" MaxLength="50" />
+          <Property Name="precio4" Type="nvarchar" MaxLength="50" />
+          <Property Name="costo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Existencia" Type="int" />
         </EntityType>
-        <EntityContainer Name="MVCModelStoreContainer">
+        <EntityContainer Name="dbd541ac24df8c44619ce3a4ba0074aa5dModelStoreContainer">
           <EntitySet Name="productos" EntityType="Self.productos" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [productos].[ID] AS [ID], 
@@ -44,25 +43,24 @@ warning 6002: The table/view 'MVC.dbo.productos' does not have a primary key def
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="MVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbd541ac24df8c44619ce3a4ba0074aa5dModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="producto">
           <Key>
             <PropertyRef Name="ID" />
             <PropertyRef Name="Codigo" />
-            <PropertyRef Name="Nombre" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Codigo" Type="String" MaxLength="26" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="70" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="RefProv" Type="String" MaxLength="24" FixedLength="true" Unicode="true" />
-          <Property Name="precio1" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="precio2" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="precio3" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="precio4" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="costo" Type="Decimal" Precision="18" Scale="4" />
-          <Property Name="Existencia" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Nombre" Type="String" MaxLength="70" FixedLength="true" Unicode="true" />
+          <Property Name="RefProv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="precio1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="precio2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="precio3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="precio4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="costo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Existencia" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="MVCEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MvcEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="productos" EntityType="Self.producto" />
         </EntityContainer>
       </Schema>
@@ -70,9 +68,9 @@ warning 6002: The table/view 'MVC.dbo.productos' does not have a primary key def
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MVCModelStoreContainer" CdmEntityContainer="MVCEntities">
+        <EntityContainerMapping StorageEntityContainer="dbd541ac24df8c44619ce3a4ba0074aa5dModelStoreContainer" CdmEntityContainer="MvcEntities">
           <EntitySetMapping Name="productos">
-            <EntityTypeMapping TypeName="MVCModel.producto">
+            <EntityTypeMapping TypeName="dbd541ac24df8c44619ce3a4ba0074aa5dModel.producto">
               <MappingFragment StoreEntitySet="productos">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Codigo" ColumnName="Codigo" />

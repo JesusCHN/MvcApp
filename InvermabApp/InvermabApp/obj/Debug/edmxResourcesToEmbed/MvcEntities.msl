@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MVCModelStoreContainer" CdmEntityContainer="MVCEntities">
+  <EntityContainerMapping StorageEntityContainer="dbd541ac24df8c44619ce3a4ba0074aa5dModelStoreContainer" CdmEntityContainer="MvcEntities">
     <EntitySetMapping Name="productos">
-      <EntityTypeMapping TypeName="MVCModel.producto">
+      <EntityTypeMapping TypeName="dbd541ac24df8c44619ce3a4ba0074aa5dModel.producto">
         <MappingFragment StoreEntitySet="productos">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />

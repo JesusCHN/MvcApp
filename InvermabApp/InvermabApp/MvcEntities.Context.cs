@@ -13,10 +13,10 @@ namespace InvermabApp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MVCEntities : DbContext
+    public partial class MvcEntities : DbContext
     {
-        public MVCEntities()
-            : base("name=MVCEntities")
+        public MvcEntities()
+            : base("name=MvcEntities")
         {
         }
     
