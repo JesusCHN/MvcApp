@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Nombre" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="26" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="70" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="RefProv" Type="String" MaxLength="24" FixedLength="true" Unicode="true" />
+    <Property Name="precio1" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="precio2" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="precio3" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="precio4" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="costo" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Existencia" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityContainer Name="MVCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="productos" EntityType="Self.producto" />
+  </EntityContainer>
+</Schema>
